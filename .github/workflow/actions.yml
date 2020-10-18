@@ -1,0 +1,15 @@
+name: Actions
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Merge README.md files
+      - run: |
+            cat .github/README.md Assets/Documentation~/README.md >> README_testing.md
